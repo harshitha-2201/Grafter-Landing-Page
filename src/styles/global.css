@@ -1,0 +1,225 @@
+/* Gradient Text */
+
+body {
+  font-family: "Raleway";
+}
+.gradient-text.default {
+  background: linear-gradient(90deg, #5895F0, #F1B662);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  white-space: nowrap;   
+}
+
+.gradient-text.gray  {
+  background: linear-gradient(90deg, #a4a1a1, #817f7d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  white-space: nowrap;   
+}
+/* Gradient button */
+
+.gradient-btn {
+  padding: 16px 32px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #5895F0, #F1B662);
+  color: white;
+  font-weight: 600;
+  border: none;
+  transition: 0.3s ease;
+}
+
+.gradient-btn:hover {
+  opacity: 0.9;
+}
+
+
+.shape {
+  position: absolute;
+  opacity: 0.45;
+  z-index: 1;
+}
+
+.circle {
+ 
+  border-radius: 100%;
+  top: 40px;
+  left: 190px;
+
+  width: 1em;
+  height: 0.7em;
+  border-radius: 5em 5em 0em 0em;
+  
+
+}
+
+.rectangle {
+  width: 1em;
+  height: 1em;
+  border-radius: 1px;
+  border-top-left-radius: 10px;
+  top: 180px;
+  right: 200px;
+}
+
+
+@media (max-width: 1024px) {
+
+.circle {
+ 
+  top: 100px;
+  left: 0px;
+
+}
+
+.rectangle {
+  top: 210px;
+  right: 15px;
+}
+}
+
+
+
+
+/******* Skeleton */
+.skeleton-hero {
+  text-align: center;
+  padding: 120px 0;
+}
+
+.skeleton-title {
+  width: 60%;
+  height: 40px;
+  margin: 0 auto 20px;
+  background: #e5e7eb;
+  border-radius: 8px;
+  animation: pulse 1.5s infinite;
+}
+
+.skeleton-text {
+  width: 80%;
+  height: 20px;
+  margin: 0 auto 20px;
+  background: #e5e7eb;
+  border-radius: 6px;
+  animation: pulse 1.5s infinite;
+}
+
+.skeleton-btn {
+  width: 160px;
+  height: 45px;
+  margin: 0 auto;
+  background: #e5e7eb;
+  border-radius: 999px;
+  animation: pulse 1.5s infinite;
+}
+
+/* Features Skeleton */
+.skeleton-features {
+  display: flex;
+  gap: 20px;
+}
+
+.skeleton-card {
+  flex: 1;
+  height: 200px;
+  background: #e5e7eb;
+  border-radius: 12px;
+  animation: pulse 1.5s infinite;
+}
+
+/* Animation */
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+/* ===== CAROUSEL ===== */
+
+.carousel {
+  position: relative;
+}
+
+.carousel-viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.3s ease;
+  width: 100%;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  /* box-sizing: border-box; */
+  padding: 10px;
+}
+
+/* ===== CARDS ===== */
+
+.feature-card {
+  width: 90%;
+  
+  background: #f9fafb;
+  border-radius: 16px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 0px;   /*  spacing instead of height */
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-image {
+  width: 100%;
+  height: 200px;       
+  object-fit:cover;
+}
+
+.feature-card img {
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .feature-card {
+    max-width: 260px;
+  }
+}
+
+@media (max-width: 768px) {
+  .feature-card {
+    max-width: 100%;
+  }
+}
+
+/* ===== ARROWS ===== */
+
+
+.arrow {
+  position: absolute;
+  top: 35%;
+  transform: translateY(-50%);
+  z-index: 20;
+  background: white;
+  border-radius: 50%;
+  padding: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.left {
+  left: -40px;   /*  move outside */
+}
+
+.right {
+  right: -40px;
+}
