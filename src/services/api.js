@@ -13,7 +13,7 @@ export const fetchHeroContent =async() =>{
       throw new Error("Failed to load hero");
     }
 
-      const res = await fetch("/src/data/content.json");
+      const res = await fetch("/data/content.json");
       const data = await res.json()
 
       return data.hero
@@ -24,7 +24,7 @@ export const fetchFeaturesContent = async() =>{
         if (shouldFail()) {
       throw new Error("Failed to load features");
     }
-    const res = await fetch("/src/data/content.json");
+    const res = await fetch("/data/content.json");
     const data = await res.json()
     return data.featuresSection
 }
